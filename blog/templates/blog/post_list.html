@@ -6,37 +6,15 @@
 
 <body>
   <h1>Kelvin's blog</h1>
+  {% for post in posts %}
   <div>
-    <h2>Who am I</h2>
-    <p>Published: 24 March 2018 12:12:12</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum dolores pariatur maiores illo. Explicabo nulla eos, quod repellat consectetur magnam repellendus sunt saepe facere eius quae rem veniam aliquam quas! Inventore dolorum autem libero fugiat
-      fuga. Dolore aut necessitatibus, possimus pariatur, minima enim temporibus voluptatum corrupti quasi doloribus atque. Odit ad consectetur facere porro ducimus sapiente magni facilis ratione et! Et incidunt enim veritatis corporis ad, hic atque dolore
-      esse autem sunt quibusdam exercitationem adipisci velit soluta voluptatibus nostrum iusto nesciunt neque veniam porro animi, omnis amet inventore laudantium! Consectetur! Quaerat ipsum eum, alias dolore dolorum corrupti officia eaque neque esse!
-      Minima veritatis ab, iste nemo sint unde dolor quod quasi libero tempora nesciunt, officia sequi doloribus soluta deserunt praesentium! Hic officia officiis voluptate, neque culpa odio, quos vitae facere alias sapiente ab aperiam quam perferendis.
-      Molestias est commodi totam quasi assumenda iure inventore iste dolorum, earum expedita suscipit rerum! Inventore exercitationem debitis aperiam necessitatibus quibusdam natus eaque numquam! Rerum libero magnam, incidunt sequi laboriosam cum, error
-      sit beatae reiciendis facilis provident dolore ea dolores! Voluptate sapiente nemo dolorem blanditiis! Recusandae quos repellat, minus modi reiciendis doloremque voluptate, et porro totam ea error amet tempora deleniti assumenda odit. Et, voluptatum.
-      Placeat iusto consequuntur quisquam incidunt ad. Ab nemo inventore beatae! Fugit alias temporibus mollitia voluptates natus sequi a harum placeat illum, debitis quis nulla deserunt, doloremque et sit modi dolore non eos minima voluptatibus itaque
-      vel, laudantium facere quibusdam. Reprehenderit. Laboriosam porro saepe animi incidunt. Voluptatem maxime amet est cum impedit. Odio sint asperiores, ex quo fugit tempora excepturi, velit laboriosam atque amet, fuga tempore distinctio maxime dolorum
-      repellendus dolorem. Doloribus molestiae officiis recusandae sapiente dignissimos fugiat sequi deserunt enim quia doloremque. Similique mollitia alias delectus odio! Itaque numquam modi maiores. Voluptatibus, hic sapiente eius consequuntur recusandae
-      doloremque eos ex.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et tempora, voluptates tempore dolorem vel laboriosam! Velit soluta atque corrupti deserunt a, est doloribus voluptatum repellendus maiores error alias iusto distinctio!</p>
+    <h2>{{ post.title }}</h2>
+    <p>Author: {{ post.author.username }}</p>
+    <p>Published: {{ post.published_date }}</p>
+    <p>{{ post.text|linebreaksbr }}</p>
   </div>
 
-  <br />
-
-  <div>
-    <h2>Where am I</h2>
-    <p>Published: 24 March 2018 12:12:12</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum dolores pariatur maiores illo. Explicabo nulla eos, quod repellat consectetur magnam repellendus sunt saepe facere eius quae rem veniam aliquam quas! Inventore dolorum autem libero fugiat
-      fuga. Dolore aut necessitatibus, possimus pariatur, minima enim temporibus voluptatum corrupti quasi doloribus atque. Odit ad consectetur facere porro ducimus sapiente magni facilis ratione et! Et incidunt enim veritatis corporis ad, hic atque dolore
-      esse autem sunt quibusdam exercitationem adipisci velit soluta voluptatibus nostrum iusto nesciunt neque veniam porro animi, omnis amet inventore laudantium! Consectetur! Quaerat ipsum eum, alias dolore dolorum corrupti officia eaque neque esse!
-      Minima veritatis ab, iste nemo sint unde dolor quod quasi libero tempora nesciunt, officia sequi doloribus soluta deserunt praesentium! Hic officia officiis voluptate, neque culpa odio, quos vitae facere alias sapiente ab aperiam quam perferendis.
-      Molestias est commodi totam quasi assumenda iure inventore iste dolorum, earum expedita suscipit rerum! Inventore exercitationem debitis aperiam necessitatibus quibusdam natus eaque numquam! Rerum libero magnam, incidunt sequi laboriosam cum, error
-      sit beatae reiciendis facilis provident dolore ea dolores! Voluptate sapiente nemo dolorem blanditiis! Recusandae quos repellat, minus modi reiciendis doloremque voluptate, et porro totam ea error amet tempora deleniti assumenda odit. Et, voluptatum.
-      Placeat iusto consequuntur quisquam incidunt ad. Ab nemo inventore beatae! Fugit alias temporibus mollitia voluptates natus sequi a harum placeat illum, debitis quis nulla deserunt, doloremque et sit modi dolore non eos minima voluptatibus itaque
-      vel, laudantium facere quibusdam. Reprehenderit. Laboriosam porro saepe animi incidunt. Voluptatem maxime amet est cum impedit. Odio sint asperiores, ex quo fugit tempora excepturi, velit laboriosam atque amet, fuga tempore distinctio maxime dolorum
-      repellendus dolorem. Doloribus molestiae officiis recusandae sapiente dignissimos fugiat sequi deserunt enim quia doloremque. Similique mollitia alias delectus odio! Itaque numquam modi maiores. Voluptatibus, hic sapiente eius consequuntur recusandae
-      doloremque eos ex.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et tempora, voluptates tempore dolorem vel laboriosam! Velit soluta atque corrupti deserunt a, est doloribus voluptatum repellendus maiores error alias iusto distinctio!</p>
-  </div>
+  <br /> {% endfor %}
 </body>
 
 </html>
